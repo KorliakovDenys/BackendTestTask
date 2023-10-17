@@ -6,8 +6,6 @@ namespace KorliakovBackendTestTask.Models;
 public class Client {
     [ExplicitKey]
     public required string DeviceToken { get; set; }
-
     public required string Color { get; set; }
-
     public required int Price { get; set; }
 }
