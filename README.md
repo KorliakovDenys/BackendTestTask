@@ -1,4 +1,4 @@
-# Backend Test Task Readme
+# Backend Test Task
 
 This repository contains a backend application that performs experiments with random prices and provides endpoints to retrieve button colors and prices based on a device token.
 

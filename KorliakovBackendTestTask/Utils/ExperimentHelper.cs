@@ -12,7 +12,7 @@ public class ExperimentHelper : IExperimentHelper {
 
     public ExperimentHelper(
         ILogger<ExperimentHelper> logger,
-        IRepository<Client?> repository,
+        IRepository<Client> repository,
         string[] colors,
         PriceProbability[] priceProbabilities) {
         _logger = logger;

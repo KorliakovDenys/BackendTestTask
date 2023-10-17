@@ -17,7 +17,7 @@ public class ExperimentController : ControllerBase {
         IExperimentHelper experimentHelper) {
         _experimentHelper = experimentHelper;
     }
-
+    
     [HttpGet(ButtonColor)]
     public ExperimentResponse GetButtonColor([FromQuery(Name = DeviceToken)] string deviceToken) {
         return new ExperimentResponse {
@@ -29,7 +29,7 @@ public class ExperimentController : ControllerBase {
     [HttpGet(Price)]
     public ExperimentResponse GetPrice([FromQuery(Name = DeviceToken)] string deviceToken) {
         return new ExperimentResponse {
-            Key = ButtonColor,
+            Key = Price,
             Value = _experimentHelper.GetPrice(deviceToken)
         };
     }

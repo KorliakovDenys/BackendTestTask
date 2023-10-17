@@ -19,7 +19,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddSingleton<IDbConnection>(provider => new SqlConnection(connectionString));
 builder.Services.AddSingleton<IRepository<Client>, Repository<Client>>();
 builder.Services.AddScoped<IExperimentHelper, ExperimentHelper>(provider =>
-    new ExperimentHelper(provider.GetRequiredService<ILogger<ExperimentHelper>>(),provider.GetRequiredService<IRepository<Client>>()!,
+    new ExperimentHelper(provider.GetRequiredService<ILogger<ExperimentHelper>>(),provider.GetRequiredService<IRepository<Client>>(),
         colorsArray,
         priceProbabilitiesArray));
 
